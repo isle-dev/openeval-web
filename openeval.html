@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenEval - Item by item, toward open AI evaluation.</title>
+  <title>OpenEval - Toward the open science of AI evaluation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Lobster&display=swap" rel="stylesheet">
@@ -117,13 +117,13 @@
 
     /* ── Hero ─────────────────────────────────────────────────── */
     .hero {
-      padding: 9rem 0 5rem;
+      padding: 7rem 0 5rem;
       text-align: center;
     }
 
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: normal;
       letter-spacing: -0.02em;
       line-height: 1.12;
@@ -132,7 +132,7 @@
     }
 
     .hero-sub {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--muted);
       max-width: 900px;
       margin: 0 auto 2.5rem;
@@ -456,7 +456,7 @@
     }
 
     @media (max-width: 640px) { .features-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 400px) { .features-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 430px) { .features-grid { grid-template-columns: 1fr; } }
 
     .feature-card {
       background: var(--surface);
@@ -565,7 +565,7 @@
     .step {
       display: flex;
       gap: 1.25rem;
-      align-items: flex-start;
+      align-items: baseline;
       padding: 0.9rem 0;
     }
 
@@ -591,7 +591,6 @@
       font-weight: 700;
       color: var(--ink);
       margin-bottom: 0.2rem;
-      padding-top: 0.3rem;
     }
 
     .step-body p {
@@ -692,6 +691,31 @@
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .footer-copy { text-align: left; }
     }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 5%; }
+      .nav-inner { padding: 0 4%; }
+      .footer-inner { padding: 0 5%; }
+      .footer-partners { padding: 1.25rem 5% 0; gap: 1rem; flex-wrap: wrap; }
+
+      .hero { padding: 5rem 0 3rem; }
+      .hero h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+      .hero-sub { font-size: 0.9rem; margin-bottom: 1.75rem; }
+      .btn-row { gap: 1rem; }
+
+      .section { padding: 3.5rem 0; }
+
+      .about-card,
+      .feature-card { padding: 1.1rem; }
+
+      .schema-tab-panel { font-size: 0.62rem; padding: 1rem; }
+
+      .bench-pills { gap: 0.4rem; }
+      .bench-pill { font-size: 0.72rem; padding: 0.22rem 0.6rem; }
+
+      .steps::before { left: 12px; }
+      .step-num { width: 26px; height: 26px; font-size: 0.7rem; }
+    }
   </style>
 </head>
 <body>
@@ -710,7 +734,7 @@
       <li><a href="#contribute">Contribute</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:0.6rem;">
-      <a href="https://github.com/Salomeeeee/OpenEval" class="nav-cta" style="text-decoration:none;" target="_blank" rel="noopener">
+      <a href="https://github.com/open-eval/OpenEval" class="nav-cta" style="text-decoration:none;" target="_blank" rel="noopener">
         <img src="github-logo.svg" width="30" height="30" alt="GitHub" style="display:block;">
       </a>
       <a href="https://huggingface.co/datasets/human-centered-eval/OpenEval" class="nav-cta" style="text-decoration:none;" target="_blank" rel="noopener">
@@ -723,11 +747,11 @@
 <!-- ── Hero ───────────────────────────────────────────────────── -->
 <section class="hero" id="hero">
   <div class="container">
-    <h1>Item by item,<br>toward open AI evaluation.</h1>
+    <h1>Item by item, toward<br>the open science of AI evaluation.</h1>
     <p class="hero-sub">
-      <span style="color:#273929;font-weight:500;">OpenEval</span> is a growing open-source repository for AI evaluation results,
-      built around a <span style="color:#273929;font-weight:500;">unified item-centric schema</span> to make AI evaluation more
-      accessible, transparent, and rigorous.
+      <span style="color:#273929;font-weight:500;">OpenEval</span> is an open-source, item-level repository that builds the foundation 
+      for <span style="color:#273929;font-weight:500;">AI evaluation science</span>, advancing open science toward more 
+      <span style="color:#273929;font-weight:500;">accessible</span>, <span style="color:#273929;font-weight:500;">transparent</span>, and <span style="color:#273929;font-weight:500;">rigorous</span> model assessment.
     </p>
     <div class="hero-actions">
       <div class="btn-row">
@@ -756,10 +780,10 @@
 <section class="section section-green" id="about">
   <div class="container">
     <div class="section-eyebrow">About</div>
-    <h2 class="section-title">Toward a science of AI evaluation</h2>
+    <h2 class="section-title">Toward the science of AI evaluation</h2>
     <p class="section-sub">
       AI evaluation suffers from opacity and inconsistency, 
-      and we argue that item-level benchmark data is essential to a science of AI evaluation.
+      and we argue that item-level benchmark data is essential to the science of AI evaluation.
     </p>
     <div style="margin-top:-1.5rem;margin-bottom:2rem;text-align:center;">
       <button onclick="var f=document.getElementById('paper-frame');var open=f.style.display==='block';f.style.display=open?'none':'block';this.textContent=open?'📣 Read our position paper':'Hide';" style="display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--sans);font-size:0.875rem;font-weight:600;color:#273929;background:rgba(255,255,255,0.82);border:1.5px solid rgba(255,255,255,0.82);border-radius:100px;padding:0.6rem 1.4rem;cursor:pointer;transition:background 0.15s,border-color 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.65)';this.style.borderColor='rgba(255,255,255,0.65)'" onmouseout="this.style.background='rgba(255,255,255,0.82)';this.style.borderColor='rgba(255,255,255,0.82)'">📣 Read our position paper</button>
@@ -777,7 +801,7 @@
       <div class="about-card">
         <h3>Our approach</h3>
         <p>
-          We propose OpenEval, an item-centric repository where every
+          We propose OpenEval, an item-centered repository where every
           evaluation instance, including item content, responses, and statistics,
           is captured in a self-contained entry while connected to the broader experimental context.
         </p>
@@ -806,7 +830,7 @@
 <section class="section" id="schema">
   <div class="container">
     <div class="section-eyebrow">Schema</div>
-    <h2 class="section-title">The item-centric schema</h2>
+    <h2 class="section-title">The item-centered schema</h2>
     <p class="section-sub">
       OpenEval organizes results at the item level under a unified schema, making cross-benchmark analysis and community contribution straightforward.
     </p>
@@ -998,13 +1022,13 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">🌐</div>
-        <h3>Large-Scale Coverage</h3>
+        <h3>Broad Coverage</h3>
         <p>A growing repository with 225k+ items and 8M+ responses, covering diverse models, tasks, and constructs.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🗂️</div>
         <h3>Unified Schema</h3>
-        <p>One JSON schema comprehensively standardizes evaluation results across different formats and benchmarks.</p>
+        <p>One JSON schema comprehensively standardizes results across different formats and benchmarks.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📷</div>
@@ -1113,9 +1137,9 @@
   <div class="container">
     <div class="section-eyebrow">Contribute</div>
     <h2 class="section-title">All your evaluation results are welcome</h2>
-    <p class="section-sub">
-      Sharing your evaluation results takes just a few steps — 
-      all guidelines and resources are available in our <a href="https://github.com/Salomeeeee/OpenEval" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">GitHub repository</a>.
+    <p class="section-sub" style="margin-bottom:1.5rem;">
+      Sharing your evaluation results takes just a few steps —
+      all guidelines and resources are available in our <a href="https://github.com/open-eval/OpenEval" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">GitHub repository</a>.
     </p>
     <div class="steps">
       <div class="step">
